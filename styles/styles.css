@@ -1,51 +1,76 @@
-nav {
-    background-color: #2c3e50;
-    padding: 10px;
-}
+{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-nav a {
-    color: #ffffff;
-    padding: 10px;
-    display: block;
-    text-decoration: none;
-}
+    nav {
+        background-color: #2c3e50;
+        padding: 10px;
+    }
 
-main {
-    max-width: 800px;
-}
+    nav a {
+        color: #ffffff;
+        padding: 10px;
+        display: block;
+        text-decoration: none;
+    }
 
-h1 {
-    color: #2c3e50;
-}
+    main {
+        max-width: 800px;
+    }
 
-main img {
-    width: 150px;
-    height: auto;
-    border: 1px solid #333;
-    padding: 5px;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
-}
+    h1 {
+        color: #2c3e50;
+    }
 
-aside {
-    width: 300px;
-    margin: 20px;
-    border: 1px solid #333;
-    padding: 15px;
-    background-color: #f4f4f4;
-    color: #000;
-}
+    main img {
+        width: 150px;
+        height: auto;
+        border: 1px solid #333;
+        padding: 5px;
+        float: right;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
 
-aside img {
-    width: 200px;
-    height: auto;
-}
+    aside {
+        width: 300px;
+        margin: 20px;
+        border: 1px solid #333;
+        padding: 15px;
+        background-color: #f4f4f4;
+        color: #000;
+        position: relative;
+    }
 
-p {
-    padding: 0;
-}
+    aside img {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
 
-footer {
-    margin-top: 20px;
-    border-top: 2px solid #333;
-    text-align: center;
-}
+    aside h2 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 3rem;
+    }
+
+    p {
+        padding: 0;
+    }
+
+    footer {
+        margin-top: 20px;
+        border-top: 2px solid #333;
+        text-align: center;
+    }
+
+    /* Class Selectors */
+    .box {
+        border: 1px solid blue;
+        padding: 1rem;
+        background-color: #ffffff;
+        color: blue;
+        margin: 1rem;
+    }
