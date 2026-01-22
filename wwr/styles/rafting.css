@@ -63,7 +63,7 @@ header {
 nav a {
     margin: 0 10px;
     text-decoration: none;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-weight: bold;
 }
 
@@ -114,6 +114,11 @@ footer {
     justify-content: space-between;
     align-items: center;
     background-color: var(--secondary-color);
+    color: var(--accent1-color);
+}
+
+footer a {
+    color: var(--accent2-color);
 }
 
 /* Social Media */
