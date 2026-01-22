@@ -114,7 +114,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     background-color: var(--secondary-color);
-    color: var(--accent1-color);
+    color: var(--accent2-color);
 }
 
 footer a {
