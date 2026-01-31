@@ -1,5 +1,5 @@
 /* ================================
-   1. CSS VARIABLES & RESET
+   1. CSS VARIABLES
 ================================ */
 :root {
     --primary-color: #1e6091;
@@ -10,6 +10,9 @@
     --body-font: "Arial", sans-serif;
 }
 
+/* ================================
+   2. RESET & BASE STYLES
+================================ */
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +21,9 @@
 
 body {
     font-family: var(--body-font);
+    /* Uses --body-font */
     color: var(--accent1-color);
+    /* Uses --accent1-color */
     line-height: 1.6;
 }
 
@@ -30,13 +35,21 @@ footer {
     margin: 0 auto;
 }
 
+/* FIX: Using the --heading-font variable */
+h1,
+h2 {
+    font-family: var(--heading-font);
+    /* Uses --heading-font */
+    color: var(--primary-color);
+    /* Uses --primary-color */
+}
+
 /* ================================
-   2. HEADER & NAVIGATION (Grid & Flex)
+   3. HEADER (Grid) & NAV (Flex)
 ================================ */
 .site-header {
     display: grid;
     grid-template-columns: 150px 1fr;
-    /* Grid layout for header */
     align-items: center;
     padding: 10px 0;
 }
@@ -48,7 +61,6 @@ footer {
 
 .main-nav {
     display: flex;
-    /* Flex layout for navigation */
     justify-content: flex-end;
     gap: 20px;
 }
@@ -59,13 +71,8 @@ footer {
     font-weight: bold;
 }
 
-.main-nav a:hover,
-.main-nav a.active {
-    text-decoration: underline;
-}
-
 /* ================================
-   3. HERO SECTION (Contrast Fix)
+   4. HERO SECTION
 ================================ */
 .hero {
     position: relative;
@@ -82,9 +89,10 @@ footer {
     width: 100%;
     padding: 16px;
     text-align: center;
-    /* FIX: Solid background with white text for AA contrast compliance */
+    /* High contrast: White text on dark blue background */
     background-color: rgba(24, 78, 119, 0.85);
-    color: #ffffff;
+    color: var(--accent2-color);
+    /* Uses --accent2-color for accessibility */
 }
 
 .hero article {
@@ -104,9 +112,8 @@ footer {
 }
 
 /* ================================
-   4. HISTORY SECTION (Grid Layout)
+   5. HISTORY SECTION (Grid)
 ================================ */
-
 .history-layout {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -121,7 +128,7 @@ footer {
 }
 
 /* ================================
-   5. ADVENTURES SECTION (Flexbox Gallery)
+   6. ADVENTURES SECTION (Flex)
 ================================ */
 .adventure-gallery {
     display: flex;
@@ -137,7 +144,6 @@ footer {
 .adventure-gallery img {
     width: 100%;
     height: auto;
-    border-radius: 4px;
 }
 
 .adventure-gallery figcaption {
@@ -146,13 +152,14 @@ footer {
 }
 
 /* ================================
-   6. FOOTER (Horizontal & Right Aligned)
+   7. FOOTER (Flex)
 ================================ */
 .site-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--secondary-color);
+    /* Uses --secondary-color */
     color: var(--accent2-color);
     padding: 20px;
     margin-top: 30px;
