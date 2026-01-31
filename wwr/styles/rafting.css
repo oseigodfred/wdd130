@@ -11,7 +11,7 @@
 }
 
 /* ================================
-   2. BASE STYLES
+   2. RESET & BASE STYLES
 ================================ */
 * {
     margin: 0;
@@ -21,9 +21,13 @@
 
 body {
     font-family: var(--body-font);
+    /* Uses --body-font */
     color: var(--accent1-color);
+    /* Uses --accent1-color */
+    line-height: 1.6;
 }
 
+/* Page Width Constraints */
 header,
 main,
 footer {
@@ -31,18 +35,19 @@ footer {
     margin: 0 auto;
 }
 
-/* FIX: Using --heading-font so it's no longer 'unused' */
+/* FIX: Using the --heading-font variable */
 h1,
 h2 {
     font-family: var(--heading-font);
+    /* Uses --heading-font */
     color: var(--primary-color);
+    /* Uses --primary-color */
 }
 
 /* ================================
    3. HEADER (Grid) & NAV (Flex)
 ================================ */
-
-header {
+.site-header {
     display: grid;
     grid-template-columns: 150px 1fr;
     align-items: center;
@@ -51,22 +56,23 @@ header {
 
 .logo {
     width: 120px;
+    height: auto;
 }
 
 .main-nav {
     display: flex;
     justify-content: flex-end;
+    gap: 20px;
 }
 
 .main-nav a {
-    margin-left: 20px;
     text-decoration: none;
     color: var(--primary-color);
     font-weight: bold;
 }
 
 /* ================================
-   4. HERO SECTION (Contrast Fixes)
+   4. HERO SECTION
 ================================ */
 .hero {
     position: relative;
@@ -83,11 +89,10 @@ header {
     width: 100%;
     padding: 16px;
     text-align: center;
+    /* High contrast: White text on dark blue background */
     background-color: rgba(24, 78, 119, 0.85);
-    /* --accent1-color */
-
-    /* FIX: Changed from blue to white (accent2) to pass contrast check */
     color: var(--accent2-color);
+    /* Uses --accent2-color for accessibility */
 }
 
 .hero article {
@@ -96,15 +101,18 @@ header {
     left: 20px;
     width: 80%;
     background-color: rgba(255, 255, 255, 0.85);
-    /* --accent2-color */
     padding: 16px;
+}
 
-    /* FIX: Ensures text inside the white box is dark blue/black for contrast */
-    color: var(--accent1-color);
+.hero article img {
+    float: right;
+    width: 125px;
+    margin-left: 16px;
+    border-radius: 4px;
 }
 
 /* ================================
-   5. HISTORY SECTION (Grid Layout)
+   5. HISTORY SECTION (Grid)
 ================================ */
 .history-layout {
     display: grid;
@@ -116,12 +124,12 @@ header {
 
 .history-layout img {
     width: 250px;
+    height: auto;
 }
 
 /* ================================
-   6. ADVENTURES SECTION (Flex Gallery)
+   6. ADVENTURES SECTION (Flex)
 ================================ */
-
 .adventure-gallery {
     display: flex;
     justify-content: space-between;
@@ -138,18 +146,23 @@ header {
     height: auto;
 }
 
+.adventure-gallery figcaption {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
 /* ================================
-   7. FOOTER (Flex & Contrast)
+   7. FOOTER (Flex)
 ================================ */
-footer {
+.site-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--secondary-color);
-
-    /* FIX: White text on dark blue footer to pass contrast checks */
+    /* Uses --secondary-color */
     color: var(--accent2-color);
     padding: 20px;
+    margin-top: 30px;
 }
 
 .socialmedia {
@@ -159,6 +172,4 @@ footer {
 
 .socialmedia img {
     width: 30px;
-    /* This makes dark social icons appear white for contrast */
-    filter: brightness(0) invert(1);
 }
