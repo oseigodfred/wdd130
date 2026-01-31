@@ -3,7 +3,7 @@
 ================================ */
 :root {
     --primary-color: #1e6091;
-    --secondary-color: #0b5d7a;
+    --secondary-color: #02394d;
     --accent1-color: #184e77;
     --accent2-color: #ffffff;
     --heading-font: "Georgia", serif;
@@ -90,7 +90,7 @@ h2 {
     padding: 16px;
     text-align: center;
     /* High contrast: White text on dark blue background */
-    background-color: rgba(5, 46, 77, 0.85);
+    background-color: rgba(2, 40, 70, 0.85);
     color: var(--accent2-color);
     /* Uses --accent2-color for accessibility */
 }
