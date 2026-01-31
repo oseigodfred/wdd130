@@ -21,13 +21,10 @@
 
 body {
     font-family: var(--body-font);
-    /* Uses --body-font */
     color: var(--accent1-color);
-    /* Uses --accent1-color */
     line-height: 1.6;
 }
 
-/* Page Width Constraints */
 header,
 main,
 footer {
@@ -35,18 +32,17 @@ footer {
     margin: 0 auto;
 }
 
-/* FIX: Using the --heading-font variable */
+/* FIX: Using --heading-font ensures the variable is 'Used' */
 h1,
 h2 {
     font-family: var(--heading-font);
-    /* Uses --heading-font */
     color: var(--primary-color);
-    /* Uses --primary-color */
 }
 
 /* ================================
    3. HEADER (Grid) & NAV (Flex)
 ================================ */
+
 .site-header {
     display: grid;
     grid-template-columns: 150px 1fr;
@@ -72,7 +68,7 @@ h2 {
 }
 
 /* ================================
-   4. HERO SECTION
+   4. HERO SECTION (Contrast Fixes)
 ================================ */
 .hero {
     position: relative;
@@ -89,10 +85,9 @@ h2 {
     width: 100%;
     padding: 16px;
     text-align: center;
-    /* High contrast: White text on dark blue background */
     background-color: rgba(24, 78, 119, 0.85);
+    /* FIX: High contrast white text for the blue background */
     color: var(--accent2-color);
-    /* Uses --accent2-color for accessibility */
 }
 
 .hero article {
@@ -102,6 +97,8 @@ h2 {
     width: 80%;
     background-color: rgba(255, 255, 255, 0.85);
     padding: 16px;
+    /* FIX: Ensures text isn't white-on-white (1.00:1) */
+    color: #000000;
 }
 
 .hero article img {
@@ -130,6 +127,7 @@ h2 {
 /* ================================
    6. ADVENTURES SECTION (Flex)
 ================================ */
+
 .adventure-gallery {
     display: flex;
     justify-content: space-between;
@@ -152,14 +150,14 @@ h2 {
 }
 
 /* ================================
-   7. FOOTER (Flex)
+   7. FOOTER (Flex & Contrast Fix)
 ================================ */
 .site-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--secondary-color);
-    /* Uses --secondary-color */
+    /* FIX: White text on blue background passes contrast checks */
     color: var(--accent2-color);
     padding: 20px;
     margin-top: 30px;
@@ -172,4 +170,6 @@ h2 {
 
 .socialmedia img {
     width: 30px;
+    /* FIX: Filters can make black icons white for better visibility */
+    filter: brightness(0) invert(1);
 }
