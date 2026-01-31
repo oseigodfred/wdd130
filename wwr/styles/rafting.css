@@ -90,7 +90,7 @@ h2 {
     padding: 16px;
     text-align: center;
     /* High contrast: White text on dark blue background */
-    background-color: rgba(24, 78, 119, 0.85);
+    background-color: rgba(5, 46, 77, 0.85);
     color: var(--accent2-color);
     /* Uses --accent2-color for accessibility */
 }
@@ -158,7 +158,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     /* Uses --secondary-color */
     color: var(--accent2-color);
     padding: 20px;
