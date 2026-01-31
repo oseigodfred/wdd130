@@ -19,6 +19,199 @@
 
 /* Body */
 body {
+
+    /* ================================
+   CSS VARIABLES
+================================ */
+    :root {
+        --primary-color: #1e6091;
+        --secondary-color: #0b5d7a;
+        --accent1-color: #184e77;
+        --accent2-color: #ffffff;
+
+        --heading-font: "Georgia", serif;
+        --body-font: "Arial", sans-serif;
+    }
+
+    /* ================================
+   RESET
+================================ */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* ================================
+   BASE STYLES
+================================ */
+    body {
+        font-family: var(--body-font);
+        color: var(--accent1-color);
+    }
+
+    header,
+    main,
+    footer {
+        width: 840px;
+        margin: 0 auto;
+    }
+
+    main {
+        background-color: var(--accent2-color);
+    }
+
+    h1,
+    h2 {
+        font-family: var(--heading-font);
+        color: var(--primary-color);
+    }
+
+    p,
+    section,
+    article {
+        margin: 16px;
+        padding: 8px;
+    }
+
+    /* ================================
+   HEADER (CSS GRID)
+================================ */
+    header {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        align-items: center;
+    }
+
+    header img {
+        width: 120px;
+    }
+
+    /* ================================
+   NAVIGATION (FLEXBOX)
+================================ */
+    .main-nav {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .main-nav a {
+        margin: 0 12px;
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+
+    .main-nav a:hover {
+        text-decoration: underline;
+    }
+
+    /* ================================
+   HERO SECTION
+================================ */
+    .hero {
+        position: relative;
+    }
+
+    .hero img {
+        width: 100%;
+        display: block;
+    }
+
+    /* Hero Heading Overlay */
+    .hero h1 {
+        position: absolute;
+        top: 20px;
+        width: 100%;
+        padding: 16px;
+        text-align: center;
+        background-color: var(--accent1-color);
+        color: #fff;
+        opacity: 0.85;
+    }
+
+    /* Hero Article Overlay */
+    .hero article {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        width: 80%;
+        background-color: rgba(255, 255, 255, 0.85);
+        padding: 16px;
+    }
+
+    /* Article Image */
+    .hero article img {
+        float: right;
+        width: 125px;
+        margin-left: 16px;
+        border-radius: 4px;
+    }
+
+    /* ================================
+   HISTORY SECTION
+================================ */
+    .history-layout {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .history-layout img {
+        width: 250px;
+    }
+
+    /* ================================
+   ADVENTURES SECTION
+================================ */
+    .adventure-gallery {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .adventure-gallery figure {
+        flex: 1;
+        text-align: center;
+    }
+
+    .adventure-gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+    .adventure-gallery figcaption {
+        margin-top: 8px;
+        font-weight: bold;
+    }
+
+    /* ================================
+   FOOTER
+================================ */
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--secondary-color);
+        color: var(--accent2-color);
+    }
+
+    footer a {
+        color: var(--accent2-color);
+        text-decoration: none;
+    }
+
+    /* Social Media Icons */
+    .socialmedia {
+        display: flex;
+        gap: 10px;
+    }
+
+    .socialmedia img {
+        width: 30px;
+    }
+
     font-family: var(--body-font);
     color: var(--accent1-color);
 }

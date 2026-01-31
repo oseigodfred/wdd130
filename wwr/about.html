@@ -2,73 +2,103 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us | Down the River</title>
 
     <meta name="description"
       content="Experience thrilling white water adventures with our expert guides. Adventure, safety and fun await you.">
     <meta name="author" content="Godfred Osei">
 
-    <link rel="stylesheet" href="styles/rafting.css">
+    <link rel="stylesheet" href="styles/rafting.css" />
 </head>
 
 <body>
-    <header>
-        ,<img src="images/logo.png" alt="White Water Rafting Logo">
-        <nav>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <img class="logo" src="images/logo.png" alt="Down the River Logo" />
+        <nav class="main-nav">
             <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
+            <a href="about.html" class="active">About Us</a>
             <a href="trips.html">Trips</a>
             <a href="contact.html">Contact Us</a>
         </nav>
     </header>
 
     <main>
-        <div class="hero">
-            <img src="images/hero.jpg" alt="White water rafting adventure">
 
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <img src="images/hero.jpg" alt="White water rafting adventure">
             <h1>Down the River</h1>
-            <article>
+            <article class="hero-article">
                 <img src="images/clients.jpg" alt="Happy rafting clients">
                 <p>
                     Our mission is to provide unforgettable white water rafting experiences while
                     maintaining the
-                    highest standards of safety, professionalism and fun. Adventure is our passion
-                    and nature is our
-                    playground.
+                    highest standards of safety, professionalism, and fun. Adventure is our passion
+                    and nature is our playground.
                 </p>
             </article>
-        </div>
+        </section>
 
-        <section>
+        <!-- HISTORY SECTION -->
+        <section class="history">
             <h2>History</h2>
-            <p>
-                Founded many years ago, our rafting company began with a small group of river
-                enthusiasts who believed adventure should be accessible to everyone.
-            </p>
+            <div class="history-layout">
+                <p>
+                    Founded many years ago, our rafting company began with a small group of river
+                    enthusiasts who believed adventure should be accessible to everyone.
+                </p>
+                <img src="images/history.jpg" alt="Rafting company history">
+                <p>
+                    Today, Down the River has grown into a trusted adventure company, guiding
+                    families, friends, and thrill-seekers safely through unforgettable rapids.
+                </p>
+            </div>
         </section>
 
-        <section>
-            <h2> Adventure Awaits You!</h2>
+        <!-- ADVENTURES SECTION -->
+        <section class="adventures">
+            <h2>Adventure Awaits You!</h2>
+            <div class="adventure-gallery">
+                <figure>
+                    <img src="images/los-dientes-del-diablo.jpg"
+                      alt="Los Dientes del Diablo Rapids">
+                    <figcaption>Los Dientes del Diablo</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/big-mallard.jpg" alt="Big Mallard Rapids">
+                    <figcaption>Big Mallard</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/half-day.jpg" alt="Half Day Adventure">
+                    <figcaption>Half Day Adventure</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/full-day.jpg" alt="Full Day Adventure">
+                    <figcaption>Full Day Adventure</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/sunset-rapid.jpg" alt="Sunset Rapids">
+                    <figcaption>Sunset Rapids</figcaption>
+                </figure>
+            </div>
         </section>
+
     </main>
 
-    <footer>
-        <p>©️2026 🚣‍♂️ Down the River 🚣 Godfred Osei</p>
-
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>© 2026 🚣‍♂️ Down the River | Godfred Osei</p>
         <nav class="socialmedia">
-            <a href="https://facebook.com">
-                <img src="images/facebook.png" alt="Facebook">
-            </a>
-            <a href="https://twitter.com">
-                <img src="images/twitter.png" alt="Twitter">
-            </a>
-            <a href="https://instagram.com">
-                <img src="images/instagram.png" alt="Instagram">
-            </a>
+            <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="https://twitter.com"><img src="images/twitter.png" alt="Twitter"></a>
+            <a href="https://instagram.com"><img src="images/instagram.png" alt="Instagram"></a>
         </nav>
     </footer>
+
 </body>
 
 </html>
