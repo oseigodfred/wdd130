@@ -1,5 +1,5 @@
 /* ================================
-   CSS VARIABLES
+   1. CSS VARIABLES & RESET
 ================================ */
 :root {
     --primary-color: #1e6091;
@@ -10,9 +10,6 @@
     --body-font: "Arial", sans-serif;
 }
 
-/* ================================
-   RESET & BASE STYLES
-================================ */
 * {
     margin: 0;
     padding: 0;
@@ -30,28 +27,16 @@ header,
 main,
 footer {
     max-width: 840px;
-    /* Using max-width for better behavior */
     margin: 0 auto;
 }
 
-main {
-    background-color: var(--accent2-color);
-}
-
-h1,
-h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
-
 /* ================================
-   HEADER (CSS GRID)
+   2. HEADER & NAVIGATION (Grid & Flex)
 ================================ */
 .site-header {
     display: grid;
     grid-template-columns: 150px 1fr;
-    /* Logo takes 150px, Nav takes the rest */
+    /* Grid layout for header */
     align-items: center;
     padding: 10px 0;
 }
@@ -61,22 +46,17 @@ h2 {
     height: auto;
 }
 
-/* ================================
-   NAVIGATION (FLEXBOX)
-================================ */
 .main-nav {
     display: flex;
+    /* Flex layout for navigation */
     justify-content: flex-end;
-    /* Pushes links to the right */
     gap: 20px;
-    /* Space between links */
 }
 
 .main-nav a {
     text-decoration: none;
     color: var(--primary-color);
     font-weight: bold;
-    padding: 5px 0;
 }
 
 .main-nav a:hover,
@@ -85,7 +65,7 @@ h2 {
 }
 
 /* ================================
-   HERO SECTION
+   3. HERO SECTION (Contrast Fix)
 ================================ */
 .hero {
     position: relative;
@@ -102,20 +82,18 @@ h2 {
     width: 100%;
     padding: 16px;
     text-align: center;
+    /* FIX: Solid background with white text for AA contrast compliance */
     background-color: rgba(24, 78, 119, 0.85);
-    /* Using var color with alpha */
-    color: #fff;
+    color: #ffffff;
 }
 
 .hero article {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    width: 90%;
+    width: 80%;
     background-color: rgba(255, 255, 255, 0.85);
     padding: 16px;
-    margin: 0;
-    /* Override base margin for absolute positioning */
 }
 
 .hero article img {
@@ -126,14 +104,14 @@ h2 {
 }
 
 /* ================================
-   HISTORY SECTION (GRID)
+   4. HISTORY SECTION (Grid Layout)
 ================================ */
 
 .history-layout {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
     margin: 20px 0;
 }
 
@@ -143,19 +121,17 @@ h2 {
 }
 
 /* ================================
-   ADVENTURES SECTION (FLEXBOX)
+   5. ADVENTURES SECTION (Flexbox Gallery)
 ================================ */
 .adventure-gallery {
     display: flex;
     justify-content: space-between;
     gap: 12px;
-    margin: 20px 0;
 }
 
 .adventure-gallery figure {
     flex: 1;
     text-align: center;
-    margin: 0;
 }
 
 .adventure-gallery img {
@@ -167,11 +143,10 @@ h2 {
 .adventure-gallery figcaption {
     margin-top: 8px;
     font-weight: bold;
-    font-size: 0.9rem;
 }
 
 /* ================================
-   FOOTER (FLEXBOX)
+   6. FOOTER (Horizontal & Right Aligned)
 ================================ */
 .site-footer {
     display: flex;
@@ -180,15 +155,14 @@ h2 {
     background-color: var(--secondary-color);
     color: var(--accent2-color);
     padding: 20px;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .socialmedia {
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 
 .socialmedia img {
-    width: 25px;
-    height: 25px;
+    width: 30px;
 }
