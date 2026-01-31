@@ -158,7 +158,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     /* Uses --secondary-color */
     color: var(--accent2-color);
     padding: 20px;
