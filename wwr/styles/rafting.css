@@ -93,6 +93,11 @@ h2 {
 /* ================================
    4. CONTACT TITLE & GRID
 ================================ */
+h1 {
+    text-align: center;
+    margin: 30px 0;
+}
+
 .company-info {
     text-align: center;
     margin: 30px 0;
