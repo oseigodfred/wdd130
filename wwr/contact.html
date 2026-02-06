@@ -28,24 +28,20 @@
     <main class="Contact-page">
         <h1>Contact Down the River Rafting</h1>
 
-        <section class="company-info">
-            <h2>Down The River</h2>
-            <p>233 Nawuni Road</p>
-            <p>Kumasi, Ghana</p>
-            <p>+233 50 504 1123Phone</p>
-            <p>info@downtheriver.com</p>
-        </section>
-
         <div class="contact-grid">
-            <section class="map-container">
-                <iframe class="map-frame"
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d832596.2376154073!2d-0.01471139231072905!3d6.649223901787707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sgh!4v1770317351578!5m2!1sen!2sgh"
-                  width="300" height="250" allowfullscreen="" loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade">
+            <section class="company-info">
+                <h2>Our Location</h2>
+                <p>233 Nawuni Road, Kumasi, Ghana</p>
+                <p>+233 50 504 1123</p>
+                <p>info@downtheriver.com</p>
+
+                <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=..."
+                  allowfullscreen="" loading="lazy">
                 </iframe>
             </section>
 
             <section class="contact-form">
+                <h2>Send Us a Message</h2>
                 <form action="#" method="post">
                     <label for="full-name">Full Name</label>
                     <input type="text" id="full-name" name="full-name" required>
@@ -55,44 +51,33 @@
 
                     <p>Purpose of Message</p>
                     <div class="radio-group">
-                        <input type="radio" id="general" name="purpose" value="general" required>
-                        <label for="general">General Inquiry</label>
-
-                        <input type="radio" id="reservation" name="purpose" value="reservation">
-                        <label for="reservation">Reservation Question</label>
-
-                        <input type="radio" id="website" name="purpose" value="website">
-                        <label for="website">Website Suggestion</label>
+                        <div class="radio-item">
+                            <input type="radio" id="general" name="purpose" value="general"
+                              required>
+                            <label for="general">General Inquiry</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="reservation" name="purpose" value="reservation">
+                            <label for="reservation">Reservation Question</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="website" name="purpose" value="website">
+                            <label for="website">Website Suggestion</label>
+                        </div>
                     </div>
 
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5"
-                      placeholder="How can we help you?" required></textarea>
+                    <textarea id="message" name="message" rows="5" required></textarea>
 
                     <div class="newsletter-row">
                         <input type="checkbox" id="subscribe" name="newsletter">
                         <label for="subscribe">Please subscribe me to the monthly newsletter</label>
                     </div>
 
-                    <button type="submit" class="submit-btn">Send Your Message</button>
+                    <button type="submit" class="submit-btn">Send My Message</button>
                 </form>
             </section>
-
-            <section class="employees">
-                <h2>Meet Our Team</h2>
-                <figure>
-                    <img src="images/employee1.png" alt="Daniel Boateng">
-                    <figcaption>Daniel Boateng</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/employee2.png" alt="Ama Mensah">
-                    <figcaption>Ama Mensah</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/employee3.png" alt="Freda Asare">
-                    <figcaption>Freda Asare</figcaption>
-                </figure>
-            </section>
+        </div>
     </main>
 
     <footer class="site-footer">
